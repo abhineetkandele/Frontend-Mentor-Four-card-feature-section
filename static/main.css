@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --colorTeamBuilder: hsl(0, 78%, 62%);
+  --colorSupervisor: hsl(180, 62%, 55%);
+  --colorKarma: hsl(34, 97%, 64%);
+  --colorCalculator: hsl(212, 86%, 64%);
+
+  --colorHeader: hsl(234, 12%, 34%);
+  --colorBody: hsl(229, 6%, 66%);
+
+  --colorBackground: hsl(0, 0%, 98%);
+
+  --appFontSize: "15px";
+  --appBorderRadius: "6px";
+
+  --appBoxShadow: 1px 5px 10px 5px hsl(229deg 75% 93%);
+}
+
+html,
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--colorBackground);
+  font-family: "Poppins", serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--colorHeader);
+}
+
+.grid {
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  margin: 30px;
+}
+
+.page-heading {
+  font-weight: 100;
+}
+
+.page-description {
+  color: var(--colorBody);
+  font-weight: 400;
+  margin: 0 auto 40px auto;
+  max-width: 550px;
+}
+
+.card {
+  box-shadow: var(--appBoxShadow);
+  background-color: white;
+  border-radius: 6px;
+  margin: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-icon {
+  align-self: flex-end;
+}
+
+.card-description {
+  color: var(--colorBody);
+  font-weight: 200;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.section1 {
+  border-top: 5px solid var(--colorSupervisor);
+}
+
+.section2 {
+  border-top: 5px solid var(--colorTeamBuilder);
+}
+
+.section3 {
+  border-top: 5px solid var(--colorKarma);
+}
+
+.section4 {
+  border-top: 5px solid var(--colorCalculator);
+}
+
+@media screen and (min-width: 750px) {
+  html,
+  body {
+    height: 100%;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    padding: 30px;
+    margin: 30px 15px;
+    align-self: center;
+    max-width: 350px;
+  }
+}
